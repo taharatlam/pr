@@ -1,0 +1,421 @@
+@font-face {
+  font-family: "Halcom ExtraBold";
+  src: url("../fonts/Halcom-ExtraBold.ttf") format("ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #151515;
+  color: white;
+  background: #151515;
+  overflow: hidden;
+  padding-right: 16px;
+}
+
+.c--container {
+  margin: 0 auto;
+  padding: 0px 1em;
+  width: 100%;
+}
+
+@media (min-width: 767px) {
+  .c--container {
+    max-width: 600px;
+  }
+}
+@media (min-width: 800px) {
+  .c--container {
+    max-width: 767px;
+  }
+}
+@media (min-width: 991px) {
+  .c--container {
+    max-width: 850px;
+  }
+}
+@media (min-width: 1200px) {
+  .c--container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1440px) {
+  .c--container {
+    max-width: 1350px;
+  }
+}
+.c--lines {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+.c--lines_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.c--lines span {
+  height: 100vh;
+  display: block;
+  width: 1px;
+  background: white;
+  opacity: 0.05;
+}
+
+.main-nav {
+  position: relative;
+  z-index: 99;
+}
+.main-nav .nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em 0px;
+}
+.main-nav .nav-inner .logo {
+  position: relative;
+  width: 150px;
+  display: inline-block;
+}
+.main-nav .nav-inner .logo img {
+  width: 100%;
+}
+
+.menu-btn {
+  position: relative;
+  display: block;
+  width: 50px;
+}
+.menu-btn span {
+  width: 100%;
+  height: 2px;
+  background: white;
+  margin-bottom: 8px;
+  display: block;
+}
+.menu-btn span:last-child {
+  margin-bottom: 0;
+}
+
+.page--content {
+  position: relative;
+  z-index: 5;
+}
+
+.fixed-el {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+.fixed-el > * {
+  width: 100%;
+  height: 100%;
+}
+
+.head-gif {
+  width: 100%;
+  padding-top: 110%;
+  position: relative;
+}
+.head-gif:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5%);
+  width: 65%;
+  height: 50%;
+  background: black;
+  filter: blur(50px);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.head-gif img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+}
+
+.scroll--sec .fixed-el {
+  mix-blend-mode: multiply;
+}
+
+.white-bg {
+  background: white;
+}
+
+.para {
+  font-size: 17px;
+  line-height: 160%;
+  color: white;
+}
+.para.dark {
+  color: #151515;
+}
+
+.header-combiner {
+  position: relative;
+  padding-bottom: 0em;
+}
+.header-combiner .painting-bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+.header-combiner header, .header-combiner section {
+  position: relative;
+  z-index: 5;
+}
+
+.head-coin-sec {
+  margin-top: -130px;
+}
+
+.head--tile {
+  position: relative;
+  text-align: center;
+  padding: 5em 0px;
+  padding-bottom: 5em;
+}
+.head--tile .lines {
+  overflow: hidden;
+}
+.head--tile .lines h1 {
+  font-size: 8em;
+  margin-bottom: 0;
+  line-height: 100%;
+  font-weight: 800;
+  font-family: "Halcom ExtraBold", sans-serif;
+}
+.head--tile .lines span {
+  font-family: "Halcom ExtraBold", sans-serif;
+}
+.head--tile .lines.lines--1 {
+  text-transform: uppercase;
+}
+.head--tile .lines.lines--1 span {
+  color: #ddb93e;
+  font-family: "Halcom ExtraBold", sans-serif;
+}
+.head--tile .lines.lines--2 {
+  text-transform: uppercase;
+}
+
+.scroll--sec, .scroll--sec--2 {
+  position: relative;
+}
+
+.scroll--sec {
+  position: relative;
+  z-index: 5;
+}
+
+.content--block {
+  padding: 5em 0px;
+  position: relative;
+  z-index: 5;
+}
+.content--block .para {
+  font-size: 22px;
+}
+
+.heading {
+  font-size: 72px;
+  margin-bottom: 0.3em;
+  text-transform: uppercase;
+}
+.heading.dark {
+  color: #151515 !important;
+}
+.heading.sm {
+  font-size: 32px;
+}
+
+.sec {
+  position: relative;
+  padding: 6em 0px;
+}
+
+.line {
+  overflow: hidden;
+}
+
+.line span {
+  display: inline-block !important;
+  position: relative;
+}
+
+.text-highlight {
+  opacity: 0.25;
+  transition: 0.2s ease-in-out;
+}
+.text-highlight.active {
+  opacity: 1;
+}
+
+body.fixed {
+  overflow: hidden;
+}
+
+#opener {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: white;
+  position: fixed;
+  z-index: 99999999999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#opener span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scaleX(0.005) scaleY(0.01);
+  background: #151515;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+}
+#opener .loading-text {
+  font-size: clamp(32px, 6vw, 350px);
+  font-weight: 900;
+  color: #151515;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.f-text-sec {
+  padding: 5em 0px;
+  padding-bottom: 1.5em;
+}
+
+.rev-vid-wrapper {
+  width: 100%;
+}
+.rev-vid-wrapper video {
+  width: 100%;
+}
+
+.vid-pain-sec {
+  position: relative;
+  padding: 5em 0px;
+  padding-bottom: 12em;
+}
+
+.vid-play .rev-vid-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.vid-play video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.vid-auto {
+  width: 100%;
+  position: relative;
+  padding-top: 100%;
+}
+.vid-auto video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.vd-gr-sec {
+  position: relative;
+  padding: 7em 0px;
+}
+.vd-gr-sec .vid-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.vd-gr-sec .vid-wrapper video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.vd-gr-sec .container {
+  position: relative;
+  z-index: 8;
+}
+.vd-gr-sec .txt-container {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.p-big {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 180%;
+}
+
+.vid-sec {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.vid-sec .vid-play {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  height: 100%;
+}
+.vid-sec .cnn {
+  margin: 0 auto;
+  max-width: 850px;
+}
+.vid-sec .cnn .para {
+  max-width: 600px;
+  margin-top: 2em;
+}
+
+.big-head {
+  font-weight: 700;
+  color: white;
+  font-size: 100px;
+  line-height: 100%;
+}/*# sourceMappingURL=main.css.map */
